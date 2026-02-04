@@ -11,42 +11,49 @@
 </head>
 <body>
 
-  <header class="hero">
-    <nav class="nav">
-      <div class="logo">Portfolio<span>.</span></div>
+<header class="hero" id="home">
+  <nav class="nav">
+    <div class="logo">Habeeb<span>.</span></div>
 
-      <div class="links" id="navLinks">
-        <a href="#about">About</a>
-        <a href="#skills">Skills</a>
-        <a href="#projects">Projects</a>
-        <a href="#experience">Experience</a>
-        <a href="#certificates">Certificates</a>
-        <a href="#contact">Contact</a>
-      </div>
+    <!-- Desktop links + Mobile slider -->
+    <div class="links" id="navLinks">
+      <span class="close-btn" id="closeMenu">✕</span>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#experience">Experience</a>
+      <a href="#certificates">Certificates</a>
+      <a href="#contact">Contact</a>
+    </div>
 
-      <div class="hamburger" id="hamburger">☰</div>
-    </nav>
+    <!-- Hamburger (mobile only) -->
+    <div class="hamburger" id="hamburger" aria-label="Open menu" role="button">☰</div>
+  </nav>
 
-    <div class="hero-content with-photo">
-      <div class="hero-text">
-        <h1>Habeeb Abdullah</h1>
-        <p class="subtitle">Computer Engineer | AI & Cybersecurity</p>
-        <p class="desc">
-          Building secure, AI-powered systems.  
-          Focused on real-world cyber defense, CTFs, and intelligent security solutions.
-        </p>
-        <div class="cta">
-          <a class="btn primary" href="#projects">View Projects</a>
-          <a class="btn ghost" href="#contact">Contact Me</a>
-        </div>
-      </div>
-
-      <div class="hero-photo">
-        <img src="personal_photo.jpeg" alt="Habeeb Abdullah" />
+  <div class="hero-content with-photo">
+    <div class="hero-text">
+      <h1>Habeeb Abdullah</h1>
+      <p class="subtitle">Computer Engineer | AI & Cybersecurity</p>
+      <p class="desc">
+        Building secure, AI-powered systems. Focused on real-world cyber defense, CTFs, and intelligent security solutions.
+      </p>
+      <div class="cta">
+        <a class="btn primary" href="#projects">View Projects</a>
+        <a class="btn ghost" href="#contact">Contact Me</a>
       </div>
     </div>
-  </header>
 
+    <div class="hero-photo">
+      <img src="personal_photo.jpeg" alt="Portrait photo of Habeeb Abdullah">
+    </div>
+  </div>
+</header>
+
+<!-- Backdrop for mobile slider -->
+<div class="menu-backdrop" id="menuBackdrop" aria-hidden="true"></div>
+
+<main>
+  <!-- About -->
   <section id="about" class="section">
     <h2>About Me</h2>
     <p>
@@ -57,6 +64,7 @@
     </p>
   </section>
 
+  <!-- Skills -->
   <section id="skills" class="section dark">
     <h2>Core Skills</h2>
     <div class="grid skills-grid">
@@ -102,6 +110,7 @@
     </div>
   </section>
 
+  <!-- Projects -->
   <section id="projects" class="section">
     <h2>Featured Projects</h2>
     <div class="grid">
@@ -134,6 +143,7 @@
     </div>
   </section>
 
+  <!-- Experience -->
   <section id="experience" class="section dark">
     <h2>Experience</h2>
     <div class="timeline">
@@ -164,6 +174,7 @@
     </div>
   </section>
 
+  <!-- Certificates -->
   <section id="certificates" class="section">
     <h2>Certificates</h2>
     <div class="cert-grid">
@@ -173,7 +184,7 @@
       </div>
 
       <div class="cert-card">
-        <img class="zoomable" src="1st place.jpeg" alt="1st Place AI Hackathon" data-caption="AI Hackathon – 1st Place">
+        <img class="zoomable" src="1st place.jpeg" alt="AI Hackathon – 1st Place" data-caption="AI Hackathon – 1st Place">
         <p>AI Hackathon – 1st Place</p>
       </div>
 
@@ -189,6 +200,7 @@
     </div>
   </section>
 
+  <!-- Contact -->
   <section id="contact" class="section">
     <h2>Contact</h2>
     <div class="contact-grid">
@@ -221,19 +233,19 @@
       </div>
     </div>
   </section>
+</main>
 
-  <footer>
-    <p>© 2026 Habeeb Abdullah</p>
-  </footer>
+<footer>
+  <p>© 2026 Habeeb Abdullah</p>
+</footer>
 
-  <!-- Image Modal -->
-  <div id="imgModal" class="modal">
-    <span class="modal-close" id="modalClose">&times;</span>
-    <img class="modal-content" id="modalImg" />
-    <div class="modal-caption" id="modalCaption"></div>
-  </div>
+<!-- Image Modal -->
+<div id="imgModal" class="modal" aria-hidden="true">
+  <span class="modal-close" id="modalClose">&times;</span>
+  <img class="modal-content" id="modalImg" alt="">
+  <div class="modal-caption" id="modalCaption"></div>
+</div>
 
-  <script src="scripts.js"></script>
+<script src="scripts.js"></script>
 </body>
 </html>
-
