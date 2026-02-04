@@ -52,7 +52,7 @@ body {
 }
 
 .hamburger {
-  display: none;   /* ❌ مخفي على الكمبيوتر */
+  display: none;
   font-size: 26px;
   cursor: pointer;
 }
@@ -78,9 +78,26 @@ body {
   background: #0b1020;
 }
 
-/* الجوال والتابلت فقط */
-@media (max-width: 768px) {
+/* خلفية عند فتح السلايدر */
+.menu-backdrop {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.6);
+  z-index: 9998;
+}
 
+/* زر إغلاق */
+.close-btn {
+  display: none;
+  font-size: 24px;
+  align-self: flex-end;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+
+/* الجوال فقط */
+@media (max-width: 768px) {
   .links {
     position: fixed;
     top: 65px;
@@ -92,6 +109,7 @@ body {
     flex-direction: column;
     padding: 25px;
     transition: right .3s ease;
+    z-index: 9999;
   }
 
   .links.open {
@@ -99,7 +117,15 @@ body {
   }
 
   .hamburger {
-    display: block;   /* يظهر فقط على الجوال */
+    display: block;
+  }
+
+  .menu-backdrop.show {
+    display: block;
+  }
+
+  .close-btn {
+    display: block;
   }
 
   .hero-content {
@@ -110,5 +136,25 @@ body {
   .hero-photo img {
     max-width: 280px;
     margin: 0 auto;
+  }
+}
+
+/* الكمبيوتر فقط */
+@media (min-width: 769px) {
+  .links {
+    position: static !important;
+    height: auto !important;
+    width: auto !important;
+    background: none !important;
+    display: flex !important;
+    flex-direction: row !important;
+    padding: 0 !important;
+    right: auto !important;
+  }
+
+  .menu-backdrop,
+  .close-btn,
+  .hamburger {
+    display: none !important;
   }
 }
