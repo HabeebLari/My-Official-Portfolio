@@ -111,6 +111,16 @@ a { color: var(--accent); text-decoration: none; }
 
 .section.dark { background: var(--bg2); }
 
+.section h2 {
+  color: var(--accent2);       /* العناوين بلون مختلف */
+  letter-spacing: 0.4px;
+  margin-bottom: 30px;
+}
+
+.section h3 {
+  color: var(--accent);        /* عناوين الكروت بلون مختلف */
+}
+
 .grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -223,8 +233,21 @@ a { color: var(--accent); text-decoration: none; }
 }
 
 /* Mobile Slider */
-.menu-backdrop { display: none; position: fixed; inset: 0; background: rgba(0,0,0,.6); z-index: 9998; }
-.close-btn { display: none; font-size: 24px; cursor: pointer; align-self: flex-end; }
+.menu-backdrop {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,.6);
+  z-index: 9998;
+}
+
+.close-btn {
+  display: none;
+  font-size: 24px;
+  cursor: pointer;
+  align-self: flex-end;
+  margin-bottom: 10px;
+}
 
 @media (max-width: 768px) {
   .links {
